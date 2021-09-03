@@ -1,0 +1,99 @@
+name:                videos
+version:             0.1.0.0
+github:              "s-zeng/videos"
+license:             AGPLv3
+author:              "Simon Zeng"
+maintainer:          "contact@simonzeng.com"
+copyright:           "2021 Simon Zeng"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+synopsis:            Source code for videos on the "Math and Programming with Simon" Youtube Channel
+category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/s-zeng/videos#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- reanimate
+- reanimate-svg
+- freer-simple
+- co-log
+- relude
+- transformers
+- linear
+- vector
+- JuicyPixels
+
+default-extensions:
+- BangPatterns
+- BinaryLiterals
+- ConstraintKinds
+- DataKinds
+- DefaultSignatures
+- DeriveDataTypeable
+- DeriveFoldable
+- DeriveFunctor
+- DeriveGeneric
+- DeriveTraversable
+- DoAndIfThenElse
+- EmptyDataDecls
+- ExistentialQuantification
+- FlexibleContexts
+- FlexibleInstances
+- FunctionalDependencies
+- GADTs
+- GeneralizedNewtypeDeriving
+- InstanceSigs
+- KindSignatures
+- LambdaCase
+- MultiParamTypeClasses
+- MultiWayIf
+- NamedFieldPuns
+- NoImplicitPrelude
+- OverloadedStrings
+- PartialTypeSignatures
+- PatternGuards
+- PolyKinds
+- RankNTypes
+- RecordWildCards
+- ScopedTypeVariables
+- StandaloneDeriving
+- TupleSections
+- TypeFamilies
+- TypeSynonymInstances
+- ViewPatterns
+
+
+library:
+  source-dirs: src
+
+executables:
+  videos-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -W
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - videos
+
+tests:
+  videos-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -W
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - videos

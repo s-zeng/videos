@@ -1,0 +1,205 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           videos
+version:        0.1.0.0
+synopsis:       Source code for videos on the "Math and Programming with Simon" Youtube Channel
+description:    Please see the README on GitHub at <https://github.com/s-zeng/videos#readme>
+category:       Web
+homepage:       https://github.com/s-zeng/videos#readme
+bug-reports:    https://github.com/s-zeng/videos/issues
+author:         Simon Zeng
+maintainer:     contact@simonzeng.com
+copyright:      2021 Simon Zeng
+license:        AGPLv3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/s-zeng/videos
+
+library
+  exposed-modules:
+      Lib
+      Simon.Snippets.Geometry
+      Simon.Static.Colours
+  other-modules:
+      Paths_videos
+  hs-source-dirs:
+      src
+  default-extensions:
+      BangPatterns
+      BinaryLiterals
+      ConstraintKinds
+      DataKinds
+      DefaultSignatures
+      DeriveDataTypeable
+      DeriveFoldable
+      DeriveFunctor
+      DeriveGeneric
+      DeriveTraversable
+      DoAndIfThenElse
+      EmptyDataDecls
+      ExistentialQuantification
+      FlexibleContexts
+      FlexibleInstances
+      FunctionalDependencies
+      GADTs
+      GeneralizedNewtypeDeriving
+      InstanceSigs
+      KindSignatures
+      LambdaCase
+      MultiParamTypeClasses
+      MultiWayIf
+      NamedFieldPuns
+      NoImplicitPrelude
+      OverloadedStrings
+      PartialTypeSignatures
+      PatternGuards
+      PolyKinds
+      RankNTypes
+      RecordWildCards
+      ScopedTypeVariables
+      StandaloneDeriving
+      TupleSections
+      TypeFamilies
+      TypeSynonymInstances
+      ViewPatterns
+  build-depends:
+      JuicyPixels
+    , base >=4.7 && <5
+    , co-log
+    , freer-simple
+    , linear
+    , reanimate
+    , reanimate-svg
+    , relude
+    , transformers
+    , vector
+  default-language: Haskell2010
+
+executable videos-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_videos
+  hs-source-dirs:
+      app
+  default-extensions:
+      BangPatterns
+      BinaryLiterals
+      ConstraintKinds
+      DataKinds
+      DefaultSignatures
+      DeriveDataTypeable
+      DeriveFoldable
+      DeriveFunctor
+      DeriveGeneric
+      DeriveTraversable
+      DoAndIfThenElse
+      EmptyDataDecls
+      ExistentialQuantification
+      FlexibleContexts
+      FlexibleInstances
+      FunctionalDependencies
+      GADTs
+      GeneralizedNewtypeDeriving
+      InstanceSigs
+      KindSignatures
+      LambdaCase
+      MultiParamTypeClasses
+      MultiWayIf
+      NamedFieldPuns
+      NoImplicitPrelude
+      OverloadedStrings
+      PartialTypeSignatures
+      PatternGuards
+      PolyKinds
+      RankNTypes
+      RecordWildCards
+      ScopedTypeVariables
+      StandaloneDeriving
+      TupleSections
+      TypeFamilies
+      TypeSynonymInstances
+      ViewPatterns
+  ghc-options: -W -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyPixels
+    , base >=4.7 && <5
+    , co-log
+    , freer-simple
+    , linear
+    , reanimate
+    , reanimate-svg
+    , relude
+    , transformers
+    , vector
+    , videos
+  default-language: Haskell2010
+
+test-suite videos-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_videos
+  hs-source-dirs:
+      test
+  default-extensions:
+      BangPatterns
+      BinaryLiterals
+      ConstraintKinds
+      DataKinds
+      DefaultSignatures
+      DeriveDataTypeable
+      DeriveFoldable
+      DeriveFunctor
+      DeriveGeneric
+      DeriveTraversable
+      DoAndIfThenElse
+      EmptyDataDecls
+      ExistentialQuantification
+      FlexibleContexts
+      FlexibleInstances
+      FunctionalDependencies
+      GADTs
+      GeneralizedNewtypeDeriving
+      InstanceSigs
+      KindSignatures
+      LambdaCase
+      MultiParamTypeClasses
+      MultiWayIf
+      NamedFieldPuns
+      NoImplicitPrelude
+      OverloadedStrings
+      PartialTypeSignatures
+      PatternGuards
+      PolyKinds
+      RankNTypes
+      RecordWildCards
+      ScopedTypeVariables
+      StandaloneDeriving
+      TupleSections
+      TypeFamilies
+      TypeSynonymInstances
+      ViewPatterns
+  ghc-options: -W -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyPixels
+    , base >=4.7 && <5
+    , co-log
+    , freer-simple
+    , linear
+    , reanimate
+    , reanimate-svg
+    , relude
+    , transformers
+    , vector
+    , videos
+  default-language: Haskell2010
